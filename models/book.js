@@ -2,6 +2,10 @@ var mongoose = require('mongoose');
 
 // Book Schema
 var bookSchema = mongoose.Schema({
+	book_no:{
+		type: String,
+		required: true
+	},
 	title:{
 		type: String,
 		required: true
@@ -52,6 +56,7 @@ module.exports.getBookById = function(id, callback){
 module.exports.updateBook = function(id, book, options, callback){
 	var query = {_id: id};
 	var update = {
+		book_no: book.book_no,
 		title: book.title,
 		genre: book.genre,
 		description: book.description,

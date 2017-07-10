@@ -1,0 +1,30 @@
+<div class="panel panel-default" >
+  <div class="panel-heading">
+    <h3 class="panel-title">Books</h3>
+  </div>
+  <div class="panel-body">
+      <div class="row">
+          <div *ngFor="let post of posts">
+              <div class="col-md-4">
+                  <div class="col-md-8">
+                        <img class="thumbnail" src="{{post.image_url}}">
+                        <h3>{{post.title}}</h3>
+                        <p>{{post.description}}</p>
+                        <a class="btn btn-primary" routerLink="/books/details/{{post._id}}">View Details </a>
+
+                  </div>
+                  
+              </div>
+              
+
+          </div>
+
+      </div>
+  
+  </div>
+
+
+
+
+
+
